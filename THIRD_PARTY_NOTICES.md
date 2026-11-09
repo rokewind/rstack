@@ -1,8 +1,8 @@
 # Third-party notices
 
-`skills/blast-radius` and `skills/unslop` come from [pstack](https://github.com/cursor/plugins/tree/6b0300214a09fd6029cfb7077043125758cd1fd2/pstack) at commit `6b0300214a09fd6029cfb7077043125758cd1fd2`.
+`skills/blast-radius`, `skills/unslop` and the files in `skills/review/references` come from [pstack](https://github.com/cursor/plugins/tree/6b0300214a09fd6029cfb7077043125758cd1fd2/pstack) at commit `6b0300214a09fd6029cfb7077043125758cd1fd2`.
 
-`unslop` is unchanged. `blast-radius` no longer depends on pstack's `how`, `why` and `arena` skills; see the git history for the exact diff.
+`unslop` is unchanged. `blast-radius` no longer depends on pstack's `how`, `why` and `arena` skills. The review references are pstack's `principle-test-behavior-not-implementation`, `principle-minimize-reader-load`, `principle-fix-root-causes` and `principle-migrate-callers-then-delete-legacy-apis`; one link in `minimize-reader-load.md` now points to the pinned upstream file. `skills/review/SKILL.md` is original to rstack. See the git history for the exact diffs.
 
 pstack is distributed under the following license:
 
