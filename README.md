@@ -7,6 +7,7 @@ Small agent skills and standalone developer tools. Tools work without an agent.
 | `blast-radius` | Before merging a change you don't fully trust: find what it breaks outside the diff and prove the one fact it's safe because of. |
 | `unslop` | Cutting AI writing habits from PR descriptions, comments and docs. |
 | `review` | Reviewing a PR you didn't write: intent, proven safety, tests, reader load, root causes and leftovers, with only proven findings. Uses `blast-radius` and `unslop`. |
+| `machine-maintenance` | Inspecting disk pressure and reclaiming build caches or inactive worktrees without losing active work. |
 
 ## Tools
 
