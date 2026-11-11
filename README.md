@@ -8,6 +8,7 @@ Small agent skills and standalone developer tools. Tools work without an agent.
 | `unslop` | Cutting AI writing habits from PR descriptions, comments and docs. |
 | `review` | Reviewing a PR you didn't write: intent, proven safety, tests, reader load, root causes and leftovers, with only proven findings. Uses `blast-radius` and `unslop`. |
 | `machine-maintenance` | Inspecting disk pressure and reclaiming build caches or inactive worktrees without losing active work. |
+| `pdf-documents` | Writing documents as print-ready HTML, rendering them to PDF and checking every page. |
 
 ## Tools
 
@@ -16,6 +17,7 @@ Small agent skills and standalone developer tools. Tools work without an agent.
 | `build-run` | Queue builds, share caches, clean scratch files and protect disk space. |
 | `disk-report` | Inspect disk usage and growth since a saved scan. |
 | `workspace-clean` | Audit Git worktrees; explicitly remove eligible inactive ones. |
+| `pdf-render` | Render an HTML file to PDF with headless Chrome; optionally write page images. |
 
 Native binaries: [releases](https://github.com/rokewind/rstack/releases).
 No Python or runtime packages. See [usage and installation](tools/README.md) and

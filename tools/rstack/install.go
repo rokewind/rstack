@@ -67,7 +67,7 @@ func install(args []string) error {
 	if err != nil {
 		return err
 	}
-	commands := []string{"build-run", "disk-report", "workspace-clean"}
+	commands := []string{"build-run", "disk-report", "workspace-clean", "pdf-render"}
 	if *shims {
 		for name := range guarded {
 			if old := cfg.Binaries[name]; old != "" {

@@ -12,6 +12,8 @@ The 5 GiB reserve is a polling target, not a quota on unrelated processes.
 - Worktree removal uses Git without force, requires explicit selection and an
   inactivity confirmation, and refuses unknown, primary, locked, dirty, unmerged
   or open worktrees. Untracked and ignored files count as data to preserve.
+- `pdf-render` runs your browser on the HTML you give it, with JavaScript and
+  network access as in a normal page load. Render only documents you trust.
 - Cache cleanup is limited to managed directories. Symlinked or other-user/
   group-writable managed directories are rejected. State/config lives outside repos.
 - The guard terminates only the process group it creates. It never selects host
