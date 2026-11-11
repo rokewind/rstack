@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Document title</title>
+<style>
+  /* Edit these first: accent colour and the footer text. */
+  :root { --ink: #1f2933; --muted: #6b7280; --accent: #1b3d33; --tint: #eef4f0; --rule: #d9dee3; }
+  @page {
+    size: A4;
+    margin: 22mm 20mm 24mm;
+    @bottom-left  { content: "Document title | 1 January 2026"; font: 8pt Helvetica, Arial, sans-serif; color: #6b7280; }
+    @bottom-right { content: counter(page) " / " counter(pages); font: 8pt Helvetica, Arial, sans-serif; color: #6b7280; }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { margin: 0; font: 10.5pt/1.5 Helvetica, Arial, sans-serif; color: var(--ink); }
+  h1 { font-size: 24pt; line-height: 1.15; color: var(--accent); margin: 0 0 4pt; }
+  h2 { font-size: 13pt; color: var(--accent); margin: 18pt 0 6pt; break-after: avoid; }
+  h3 { font-size: 11pt; margin: 12pt 0 4pt; break-after: avoid; }
+  p, li { orphans: 3; widows: 3; }
+  ul { padding-left: 14pt; margin: 4pt 0; }
+  li { margin: 2pt 0; }
+  img { max-width: 100%; }
+  .meta { color: var(--muted); font-size: 9pt; margin-bottom: 18pt; }
+  .page { break-before: page; }
+  .keep { break-inside: avoid; }
+  .note { color: var(--muted); font-size: 9pt; }
+
+  table { width: 100%; border-collapse: collapse; margin: 6pt 0 14pt; break-inside: avoid; }
+  th { background: var(--accent); color: #fff; text-align: left; padding: 7pt 10pt; font-size: 10pt; }
+  td { padding: 7pt 10pt; border-bottom: 1px solid var(--rule); }
+  .num { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+  tr.summary td { background: var(--tint); font-weight: bold; border-bottom: 1.5px solid var(--accent); }
+</style>
+</head>
+<body>
+
+<h1>Document title</h1>
+<div class="meta">Author · 1 January 2026 · Subtitle</div>
+
+<h2>Section heading</h2>
+<p>Body text.</p>
+<ul>
+  <li><strong>Point:</strong> detail.</li>
+  <li>Another point.</li>
+</ul>
+
+<table>
+  <thead><tr><th>Item</th><th class="num">Value</th></tr></thead>
+  <tbody>
+    <tr><td>First row</td><td class="num">0</td></tr>
+    <tr><td>Second row</td><td class="num">0</td></tr>
+    <tr class="summary"><td>Summary row</td><td class="num">0</td></tr>
+  </tbody>
+</table>
+
+<h2 class="page">Section that starts a new page</h2>
+<p>Body text.</p>
+
+</body>
+</html>

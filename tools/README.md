@@ -24,6 +24,7 @@ disk-report --json ~/repos ~/.cache
 workspace-clean --repo ~/repos/project --base origin/main
 workspace-clean --repo ~/repos/project --base origin/main \
   --remove /exact/worktree/path --confirm-inactive --apply
+pdf-render --png ./pages report.html     # writes report.pdf and page PNGs
 ```
 
 **Builds:** one shared slot, no FIFO guarantee; nested commands reuse the slot.
@@ -45,6 +46,14 @@ confirmation, merged commits and no tracked/untracked/ignored changes, locks or
 open files. Branches survive. Git refs are local: fetch yourself first if needed.
 Requires Git and `lsof`; active/pinned agent sessions cannot be inferred reliably.
 No automatic artifact-folder or worktree deletion, and no `--force` option.
+
+**PDFs:** renders a local HTML file with an installed Chrome-family browser
+(`PDF_RENDER_CHROME` overrides the choice) using a throwaway profile, no default
+headers or footers, and a time limit (`--timeout`, default 60s) that kills the
+browser's process group. Page size, margins and footers come from CSS `@page`.
+The PDF is written beside the destination and renamed into place only when it is
+valid. `--png` needs `pdftoppm` (poppler) and replaces that document's earlier
+page images. The HTML can load network resources like any web page.
 
 Build from source with Go 1.25+ (standard library only):
 `cd tools/rstack && go build -trimpath -o rstack .`.

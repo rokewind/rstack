@@ -27,7 +27,7 @@ func main() {
 func dispatch(name string, args []string) (int, error) {
 	if name == "rstack" || name == "rstack.test" {
 		if len(args) == 0 || args[0] == "--help" {
-			fmt.Println("rstack: build-run | disk-report | workspace-clean | install")
+			fmt.Println("rstack: build-run | disk-report | workspace-clean | pdf-render | install")
 			return 0, nil
 		}
 		name, args = args[0], args[1:]
@@ -37,6 +37,8 @@ func dispatch(name string, args []string) (int, error) {
 		return 0, diskReport(args)
 	case "workspace-clean":
 		return 0, workspaceClean(args)
+	case "pdf-render":
+		return 0, pdfRender(args)
 	case "install":
 		return 0, install(args)
 	case "build-run", "go", "cargo", "npm", "pnpm", "terraform":
