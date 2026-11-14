@@ -1,6 +1,6 @@
 ---
 name: review
-description: "Review a pull request or branch diff you did not write. States the intent, proves the one fact the change is safe because of, checks tests, reader load, root causes and leftovers, and reports only findings a command proves. Use for /review, 'review PR N', or before merging."
+description: "Review a pull request or branch diff you did not write. States the intent, proves the one fact the change is safe because of, checks tests, reader load, root causes, leftovers and added comments, and reports only findings a command proves. Use for /review, 'review PR N', or before merging."
 ---
 
 # Review
@@ -21,6 +21,7 @@ Read the diff, the PR description, the linked issue and the code around each cha
 4. **Reader load.** Apply [minimize reader load](references/minimize-reader-load.md) to each new layer, wrapper, adapter, flag or piece of state. Flag ones with one caller, one implementation or a pass-through shape.
 5. **Root cause.** For a bug fix, apply [fix root causes](references/fix-root-causes.md). Flag a guard where the symptom surfaced when the state should never exist, and search for the same fault elsewhere.
 6. **Leftovers.** When the change adds a new way to do something, apply [migrate callers, then delete legacy APIs](references/migrate-callers-then-delete-legacy-apis.md). Flag the old way if it survives without a stated reason.
+7. **Comments.** Apply [no-comments](../no-comments/SKILL.md): list the comments the diff adds with its check command, and flag each one that isn't a directive a tool reads.
 
 ## Evidence
 
